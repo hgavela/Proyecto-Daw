@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './/css/style.css';
 import reportWebVitals from './reportWebVitals';
 import Menu from './header';
 
