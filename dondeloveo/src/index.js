@@ -7,6 +7,7 @@ import Menu from './header';
 ReactDOM.render(
   <React.StrictMode>
     <Menu />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
