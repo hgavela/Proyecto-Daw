@@ -6,10 +6,11 @@ function Menu(){
             <nav className="menu">
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/"><img src={require('./img/logo.png')}alt="logo" width="38"/></a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/contacto">Contacto</a>
+                        <a href="/login">Login</a>
                     </li>
                 </ul>
             </nav>
