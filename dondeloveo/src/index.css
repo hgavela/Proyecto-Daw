@@ -1,3 +1,4 @@
+
 body{
   background-color: #262626;
   font-family: 'Roboto', sans-serif;
@@ -13,20 +14,41 @@ body{
   color: #41CAD9;
   height: 58px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 90% 5% 5%;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
   padding: 0px;
   margin: 0px;
   list-style: none;
+
+}
+
+ul.menu li:hover {
+  background-color: #205f66;
+
+}
+
+ul.menu li{
+  height: 58px;
 }
 
 ul.menu li a{
   text-decoration: none;
   color: #41CAD9;
+  height: 58px;
+  list-style-type: none;
 }
 
+footer {
+  flex: 0 0 auto;
+  background-color: #0D0D0D;
+  color: #41CAD9;
+  height: 48px;
+  vertical-align: middle;
+  text-align: center;
+}
 
 
 @media only screen and (min-width: 428px) {
