@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <p>Donde Loveo - Todos los derechos reservados</p>
+      <p>Donde Lo Veo - Todos los derechos reservados</p>
     </footer>
   );
 }

@@ -14,40 +14,31 @@ body{
   color: #41CAD9;
   height: 58px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 90% 5% 5%;
-  gap: 10px;
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
   align-items: center;
+  text-align: center;
   padding: 0px;
   margin: 0px;
-  list-style: none;
-
-}
-
-ul.menu li:hover {
-  background-color: #205f66;
-
-}
-
-ul.menu li{
-  height: 58px;
 }
 
 ul.menu li a{
-  text-decoration: none;
   color: #41CAD9;
   height: 58px;
-  list-style-type: none;
+  align-items: center;
+  text-align: center;
+  vertical-align: auto;
+  margin-left: 10px;
 }
 
 footer {
-  flex: 0 0 auto;
   background-color: #0D0D0D;
   color: #41CAD9;
   height: 48px;
-  vertical-align: middle;
+  align-items: center;
   text-align: center;
+  vertical-align: auto;
 }
 
 

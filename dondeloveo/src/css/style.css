@@ -1,2 +1,10 @@
 @import ".//reset.css";
 @import ".//normalize.css";
+
+:root{
+    --color-negro: #262626;
+    --color-negro-oscuro: #0D0D0D;
+    --color-cian: #41CAD9;
+    --color-aquamarina: #277A8C;
+    --color-azul-claro: #4BF2F2;
+}
