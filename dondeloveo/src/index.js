@@ -5,10 +5,12 @@ import './/css/style.css';
 import reportWebVitals from './reportWebVitals';
 import Menu from './header';
 import Footer from './footer';
+import Search from './search';
 
 ReactDOM.render(
   <React.StrictMode>
     <Menu />
+    <Search />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')
