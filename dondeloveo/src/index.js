@@ -6,11 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import Menu from './header';
 import Footer from './footer';
 import Search from './search';
+import Tendencias from './tendencia';
 
 ReactDOM.render(
   <React.StrictMode>
     <Menu />
     <Search />
+    <Tendencias />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')

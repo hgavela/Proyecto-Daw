@@ -1,0 +1,38 @@
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: var(--color-negro-oscuro);
+    color: var(--color-cian)
+}
+.menu {
+    text-align: right;
+   /* Desktop elimar el Label*/
+   /* --- */
+}
+.menu_click {
+    display: none;
+}
+@media only screen and (min-width: 428px) {
+    .menu_label {
+        display: none;
+   }
+}
+ul {
+    display: none;
+   /* Desktop Flexbox*/
+   /* --- */
+}
+@media only screen and (min-width: 428px) {
+    ul {
+        display: flex;
+        width: 50%;
+   }
+    ul li {
+        margin: 0 1rem;
+   }
+    
+}
+.menu_click:checked + ul {
+    display: block;
+}

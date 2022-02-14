@@ -1,0 +1,91 @@
+.tendencias{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 10px;
+}
+
+.tendencias h1{
+    text-align: center;
+}
+
+.tendencias-container{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 10px;
+}
+
+.tendencias-item{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 10px;
+}
+
+.tendencias-item img{
+    width: 100%;
+    height: 600px;
+}
+
+.tendencias-item h2{
+    text-align: center;
+}
+
+.tendencias-item h3{
+    text-align: center;
+}
+
+.tendencias-item p{
+    text-align: center;
+}
+
+.tendencias-item div{
+    text-align: center;
+}
+
+@media only screen and (min-width: 428px) {
+    .tendencias-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    .tendencias-container{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-gap: 10px;
+    }
+}
+
+.tendencias-item{
+    color: #41CAD9;
+}
+
+.tendencias-item:hover{
+    color: #F8F8F8;
+    background-color: #41CAD9;
+}
+
+.tendencias-item:hover h2{
+    color: #F8F8F8;
+}
+
+.tendencias-item:hover h3{
+    color: #F8F8F8;
+}
+
+.tendencias-item:hover p{
+    color: #F8F8F8;
+}
+
+.tendencias-item:hover div{
+    color: #F8F8F8;
+}
+
+.tendencias-item:hover img{
+    opacity: 0.5;
+}
+
+.tendencias-item:hover{
+    cursor: pointer;
+}	
