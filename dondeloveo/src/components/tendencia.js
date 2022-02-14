@@ -1,5 +1,5 @@
 import React from "react";
-import ".//css/tendencias.css";
+import "../css/tendencias.css";
 
 function Tendencias(){
     return (

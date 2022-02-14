@@ -44,7 +44,7 @@
 @media only screen and (min-width: 428px) {
     .tendencias-container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
         grid-gap: 10px;
     }
 }
@@ -63,23 +63,23 @@
 
 .tendencias-item:hover{
     color: #F8F8F8;
-    background-color: #41CAD9;
+    background-color: var(--color-aquamarina);
 }
 
 .tendencias-item:hover h2{
-    color: #F8F8F8;
+    color: white;
 }
 
 .tendencias-item:hover h3{
-    color: #F8F8F8;
+    color: white;
 }
 
 .tendencias-item:hover p{
-    color: #F8F8F8;
+    color: white;
 }
 
 .tendencias-item:hover div{
-    color: #F8F8F8;
+    color: white;
 }
 
 .tendencias-item:hover img{

@@ -9,7 +9,7 @@ body{
 }
 
 .search{
-  color: #41CAD9;
+  color: var(--color-cian);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -46,11 +46,15 @@ body{
 
 footer {
   background-color: #0D0D0D;
-  color: #41CAD9;
+  color: co;
   height: 48px;
-  align-items: center;
-  text-align: center;
-  vertical-align: auto;
+  margin-top: auto;
+}
+
+.contenido{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 
