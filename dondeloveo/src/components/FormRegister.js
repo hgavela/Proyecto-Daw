@@ -6,14 +6,18 @@ function FormRegister() {
         <div className="formulario_contenedor">
         <h2>Registro</h2>
         <form>
-            <input type="text" id="nombre" placeholder="Nombre Completo" />
+            <input type="text" id="username" placeholder="Nombre de Usuario" />
             <br />
-            <input type="email" id="email" placeholder="Correo electrónico" />
+            <input type="email" id="email" placeholder="Email" />
             <br />
-            <textarea id="mensaje" placeholder="Mensaje"></textarea>
-            <button className="btnLogin">Iniciar sesión</button>
+            <input type="email" id="email2" placeholder="Confirmar email" />
             <br />
-            <p>¿No tienes cuenta? Registrate</p>
+            <input type="password" id="password" placeholder="Contraseña" />
+            <br />
+            <input type="password" id="password2" placeholder="Confirmar contraseña" />
+            <br />
+            <button className="btnLogin">Registrate</button>
+            <br />
         </form>
         </div>
     </div>

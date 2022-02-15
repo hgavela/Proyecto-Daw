@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Contact from './pages/Contact';
 import Register from './pages/Register';
+import Result from './pages/Result';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path='/contacto' element={<Contact />} />
         <Route path='/registro' element={<Register />} />
+        <Route path='/resultado' element={<Result />} />
       </Switch>
     </Router>
   );

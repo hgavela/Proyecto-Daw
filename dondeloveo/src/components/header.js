@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../css/header.css';
 import logo from '../img/logo.png';
+import menu from '../img/menu.png';
 
 
 function Menu(props){
@@ -12,7 +13,7 @@ function Menu(props){
                 <img src={logo} alt="logo" className="logo" width="38"/>
             </Link>
             <div className="menu">
-                <label htmlFor="click" className="menu_label"><i className="fas fa-bars"></i></label>
+                <label htmlFor="click" className="menu_label"><i className="fas fa-bars"><img src={menu} alt="menu" width="38"/></i></label>
                 <input type="checkbox" id="click" className="menu_click" />
                     <ul>
                         <Link to="/contacto">

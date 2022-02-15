@@ -45,10 +45,17 @@ body{
 }
 
 footer {
-  background-color: #0D0D0D;
-  color: co;
+  background-color: var(--color-negro-oscuro);
   height: 48px;
   margin-top: auto;
+}
+
+footer p{
+  color: var(--color-cian);
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .contenido{

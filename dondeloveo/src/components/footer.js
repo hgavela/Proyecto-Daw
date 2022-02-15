@@ -4,7 +4,10 @@ import "../index.css"
 function Footer() {
   return (
     <footer>
-      <p>Donde Lo Veo - Todos los derechos reservados</p>
+      <p>
+        Todos los derechos reservados &copy; 2022
+      </p>
+
     </footer>
   );
 }
