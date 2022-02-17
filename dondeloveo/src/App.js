@@ -14,7 +14,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path='/contacto' element={<Contact />} />
         <Route path='/registro' element={<Register />} />
-        <Route path='/resultado' element={<Result />} />
+        <Route exact path='/resultado' element={<Result />} />
+        <Route path='/resultado/:id' element={<Result />} />
       </Switch>
     </Router>
   );

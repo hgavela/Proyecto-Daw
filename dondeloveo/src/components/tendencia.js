@@ -8,7 +8,7 @@ function Tendencias(){
         <section className="tendencias">
             <h1>Series y peliculas en tendencia</h1>
             <div className="tendencias-container">
-                <Link to="/resultado">
+                <Link to="/resultado/tt2661044">
                 <div className="tendencias-item">
                     <img src="https://image.tmdb.org/t/p/w500/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg" alt=""/>
                     <div className="tendencias-item-info">
@@ -17,7 +17,7 @@ function Tendencias(){
                     </div>
                 </div>
                 </Link>
-                <Link to="/resultado">
+                <Link to="/resultado/tt4052886">
                 <div className="tendencias-item">
                     <img src="https://image.tmdb.org/t/p/w500/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg" alt=""/>
                     <div className="tendencias-item-info">
@@ -26,7 +26,7 @@ function Tendencias(){
                     </div>
                 </div>
                 </Link>
-                <Link to="/resultado">
+                <Link to="/resultado/tt0898266">
                 <div className="tendencias-item">
                     <img src="https://image.tmdb.org/t/p/w500/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg" alt=""/>
                     <div className="tendencias-item-info">
