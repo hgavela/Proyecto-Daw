@@ -17,11 +17,12 @@
     justify-content: center;
     width: 100%;
     padding: 15px;
+    text-align: justify;
 }
 
 .plataformas{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-gap: 30px;
 
 }

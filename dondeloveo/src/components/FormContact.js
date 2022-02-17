@@ -11,9 +11,8 @@ function FormContact() {
             <input type="email" id="email" placeholder="Correo electrónico" />
             <br />
             <textarea id="mensaje" placeholder="Mensaje"></textarea>
-            <button className="btnLogin">Iniciar sesión</button>
+            <button className="btnLogin">Enviar</button>
             <br />
-            <p>¿No tienes cuenta? Registrate</p>
         </form>
         </div>
     </div>

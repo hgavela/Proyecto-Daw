@@ -43,7 +43,7 @@ label{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     border: none;
-    padding: 10px;
+    padding: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 80%;
@@ -56,7 +56,9 @@ input, textarea{
     margin-bottom: 15px;
     border: none;
     width: 80%;
-    height: 30px;
+    height: 38px;
+    padding: 10px;
+
 }
 
 textarea{
@@ -68,7 +70,7 @@ input:focus, textarea:focus{
     outline: none;
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 767px) {
     .formulario {
         grid-template-columns: 15px 1fr 15px; ;   
    }

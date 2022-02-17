@@ -15,7 +15,7 @@ function Menu(props){
             <div className="menu">
                 <label htmlFor="click" className="menu_label"><i className="fas fa-bars"><img src={menu} alt="menu" width="38"/></i></label>
                 <input type="checkbox" id="click" className="menu_click" />
-                    <ul>
+                    <ul className="menu">
                         <Link to="/contacto">
                         <li>Contacto</li>
                         </Link>

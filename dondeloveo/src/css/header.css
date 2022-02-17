@@ -1,25 +1,37 @@
 .nav-menu {
+    position:sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     padding: 30px;
     background-color: var(--color-negro-oscuro);
     color: var(--color-cian)
 }
 .menu {
-    text-align: right;
+    text-align: left;
+
    /* Desktop elimar el Label*/
    /* --- */
 }
 
 a {
     color: var(--color-cian);
+    margin-bottom: 15px;
+}
+
+li{
+    margin-bottom: 25px;
 }
 .menu_click {
     display: none;
 }
-@media only screen and (min-width: 428px) {
+@media only screen and (min-width: 429px) {
     .menu_label {
         display: none;
+   }
+   .nav-menu{
+       flex-direction: row;
    }
 }
 ul {
@@ -27,7 +39,7 @@ ul {
    /* Desktop Flexbox*/
    /* --- */
 }
-@media only screen and (min-width: 428px) {
+@media only screen and (min-width: 429px) {
     ul {
         display: flex;
         width: 50%;
@@ -37,6 +49,23 @@ ul {
    }
     
 }
+/*
 .menu_click:checked + ul {
-    display: block;
+    display: -webkit-sticky;
+    height: calc(100vh + 58px);
+}
+*/
+
+.menu_click:checked ~ ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50% 25%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: calc(100vh - 80px);
 }
