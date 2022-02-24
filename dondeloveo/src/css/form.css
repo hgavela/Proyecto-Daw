@@ -70,6 +70,10 @@ input:focus, textarea:focus{
     outline: none;
 }
 
+.input-feedback{
+    color: rgb(141, 50, 50);
+}
+
 @media only screen and (max-width: 767px) {
     .formulario {
         grid-template-columns: 15px 1fr 15px; ;   

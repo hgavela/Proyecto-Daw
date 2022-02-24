@@ -1,34 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Menu from "../components/header";
 import Footer from "../components/footer";
 import Resultado from "../components/resultado";
 import { useParams } from "react-router-dom";
+import { getData} from "../services/api";
 
-
-
-class Result extends React.Component {
+function Result() {
   
-  constructor() {
-    super();
-    var resultado = this.getData();
-    this.state = { data: resultado };
-    
-  }
-  
-  async componentWillMount() {
-      /*
-    console.log("hola");
-    const response = await fetch("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=tt2661044&source=imdb&country=es", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-            "x-rapidapi-key": "271b1c27e1msh55702f2ddad1a71p10ec12jsn8bd2cf85a04e"
-        }
-    });
-    const json = await response.json();
-    this.setState({ data: json });
-    */
-}
+  const { id } = useParams();
+  const [collection, setCollection] = useState([]);
+
+  useEffect(function(){
+    async function fetchData() {
+      const data = await getData(id);
+      setCollection(data);
+    }
+    fetchData();
+  }, [id]);
+
 
 
 
@@ -75,30 +64,14 @@ class Result extends React.Component {
   }
   */
 
-   getData = async () => {
-    console.log("hola");
-    const response = await fetch("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=tt2661044&source=imdb&country=es", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-            "x-rapidapi-key": "271b1c27e1msh55702f2ddad1a71p10ec12jsn8bd2cf85a04e"
-        }
-    });
-    const json = await response.json();
-    console.log(json);
-    return json;
-  }
-
-
-  render() {
     return (
       <div>
         <Menu />
-        <Resultado props={this.state.data} key={this.state.data.id} />
+        <Resultado props={collection} />
         <Footer />
       </div>
     );
-  }
+
 }
 
 

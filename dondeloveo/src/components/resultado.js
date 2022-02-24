@@ -2,7 +2,6 @@ import React from "react";
 import "../css/header.css";
 import "../css/resultado.css";
 import netflix from "../img/netflix.svg";
-import banner from "../img/banner.svg";
 
 
 function Resultado (props) {
@@ -10,9 +9,9 @@ function Resultado (props) {
 
   return (
     <section className="resultado">
-      <h1>{props.collection.name}</h1>
+      <h1>{props.name}</h1>
       <div className="banner">
-        <img src={props.collection.picture} alt={props.collection.name} />
+        <img src={props.picture} alt={props.name} />
       </div>
       <h1>Plataformas</h1>
       <div className="plataformas">
