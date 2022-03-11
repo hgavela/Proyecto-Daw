@@ -4,14 +4,16 @@ import "../css/resultado.css";
 import netflix from "../img/netflix.svg";
 
 
-function Resultado (props) {
-    console.log(props);
+function Resultado (name,picture,id) {
+    console.log(name);
+    let nombre = name ? "" : "";
+    let foto = picture ? "" : "";
 
   return (
-    <section className="resultado">
-      <h1>{props.name}</h1>
+    <section className="resultado" key={id}>
+      <h1>{nombre}</h1>
       <div className="banner">
-        <img src={props.picture} alt={props.name} />
+        <img src={picture} alt={foto} />
       </div>
       <h1>Plataformas</h1>
       <div className="plataformas">

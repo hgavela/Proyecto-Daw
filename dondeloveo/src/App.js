@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Contact from './pages/Contact';
 import Register from './pages/Register';
 import Result from './pages/Result';
+import Perfil from './pages/Perfil';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/registro' element={<Register />} />
         <Route exact path='/resultado' element={<Result />} />
         <Route path='/resultado/:id' element={<Result />} />
+        <Route path='/perfil' element={<Perfil />} />
       </Switch>
     </Router>
   );

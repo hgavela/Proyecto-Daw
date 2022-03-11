@@ -2,6 +2,20 @@ import React from "react";
 import "../css/form.css";
 import { Formik } from "formik";
 
+async function setRegister(username, password, email){
+  //Enviamos al servicio de login por metodo post
+
+  const api = await fetch('http://localhost:3100/backend/usuario.php?username='+username+'&password='+password+'&email='+email,{mode: 'no-cors',method: 'POST'});
+  const data = await api.json();
+  if(data.response === "true"){
+    alert("Usuario registrado exitosamente");
+  }else{
+    alert("El usuario ya existe");
+  }
+  //const data = await api.json();
+  //console.log(data);
+}
+
 function FormRegister() {
   return (
     <div className="formulario">
@@ -53,6 +67,7 @@ function FormRegister() {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
+              setRegister(values.username, values.password, values.email);
             }, 400);
           }}
         >
@@ -147,7 +162,7 @@ function FormRegister() {
                   className="btnLogin"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? `Loading` : `Submit`}
+                  {isSubmitting ? `Loading` : `Enviar`}
                 </button>
               </form>
             );

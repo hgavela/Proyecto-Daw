@@ -20,6 +20,10 @@ a {
     margin-bottom: 15px;
 }
 
+a:hover{
+    color: white;
+}
+
 li{
     margin-bottom: 25px;
 }

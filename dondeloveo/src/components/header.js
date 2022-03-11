@@ -19,9 +19,20 @@ function Menu(props){
                         <Link to="/contacto">
                         <li>Contacto</li>
                         </Link>
-                        <Link to="/login">
-                        <li>Login</li>
-                        </Link>
+                        {sessionStorage.getItem('usuario') ?(
+                            <>
+                            <Link to="/login">
+                                <li>Login</li>
+                            </Link>
+                            </>
+                        ):(
+                            <>
+                            <Link to="/perfil">
+                                <li>Perfil</li>
+                            </Link>
+                            </>
+                        )}
+                        
                     </ul>
             </div>
         </nav>

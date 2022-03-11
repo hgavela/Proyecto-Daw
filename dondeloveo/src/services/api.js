@@ -16,7 +16,11 @@ async function getData(id) {
     return await axios.get(apiURL)
         .then(response => {
             console.log(response.data);
-            return response.data.collection;
+            let name = response.data.collection.name;
+            let picture = response.data.collection.picture;
+            let id = response.data.id;
+            return { name, picture, id };
+
         })
 
 }

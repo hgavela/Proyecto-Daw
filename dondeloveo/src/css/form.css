@@ -70,6 +70,10 @@ input:focus, textarea:focus{
     outline: none;
 }
 
+.error{
+    border: red 2px solid;
+}
+
 .input-feedback{
     color: rgb(141, 50, 50);
 }
