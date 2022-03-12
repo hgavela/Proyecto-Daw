@@ -21,14 +21,14 @@ function Menu(props){
                         </Link>
                         {sessionStorage.getItem('usuario') ?(
                             <>
-                            <Link to="/login">
-                                <li>Login</li>
+                            <Link to="/perfil">
+                                <li>Perfil</li>
                             </Link>
                             </>
                         ):(
                             <>
-                            <Link to="/perfil">
-                                <li>Perfil</li>
+                            <Link to="/login">
+                                <li>Login</li>
                             </Link>
                             </>
                         )}

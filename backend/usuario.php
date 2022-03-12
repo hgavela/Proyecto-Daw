@@ -8,6 +8,7 @@ $pdo = new Conexion();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    $pdo = $GLOBALS['pdo'];
     $username = $_GET['username'];
     $password = $_GET['password'];
     $email = $_GET['email'];
@@ -29,6 +30,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'PUT'){
+
+    $pdo = $GLOBALS['pdo'];
     $id = $_GET['id'];
     $username = $_GET['username'];
     $password = $_GET['password'];
@@ -47,8 +50,9 @@ if($_SERVER['REQUEST_METHOD'] == 'PUT'){
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
-    $id = $_GET['id'];
 
+    $pdo = $GLOBALS['pdo'];
+    $id = $_GET['id'];
     $sql = "DELETE FROM usuarios WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':id', $id);
@@ -59,6 +63,7 @@ if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
+    $pdo = $GLOBALS['pdo'];
     $username = $_GET['username'];
     $password = $_GET['password'];
 
@@ -70,11 +75,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
     if($usuario){
+        /*
         session_start();
         $_SESSION['username'] = $usuario['username'];
         $_SESSION['email'] = $usuario['email'];
         $_SESSION['id'] = $usuario['id_usuario'];
-        echo 'true';
+        */
+        echo json_encode($usuario['id_usuario']);
         header("HTTP/1.1 200 Ok");
         exit;
     } else {

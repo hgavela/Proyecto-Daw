@@ -4,6 +4,7 @@ import '../css/form.css';
 import { Formik } from "formik";
 
 async function getUser(username,password){
+  
   const api = await fetch('http://localhost:3100/backend/usuario.php?username='+username+'&password='+password,{mode: 'no-cors',method: 'GET'});
   const data = await api.text();
   console.log(data);
@@ -37,10 +38,12 @@ function FormLogin() {
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
-            if(getUser(values.username, values.password)=="true"){
-              sessionStorage.setItem("username",values.username);
-              window.location.href = "/";
-            } else {
+            let id = getUser(values.username,values.password);
+            console.log(id);
+            if(id){
+              sessionStorage.setItem('usuario',id);
+              //window.location.href = "/perfil";
+            }else{
               alert("Usuario o contraseña incorrectos");
             }
             setSubmitting(false);

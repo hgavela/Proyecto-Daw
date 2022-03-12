@@ -13,6 +13,11 @@ function PerfilUsuario() {
   const delPerfil = () =>{
       setPerfil(null);
   }
+
+  const logout = () =>{
+        sessionStorage.removeItem('usuario');
+        window.location.href = "/";
+    }
   return (
     <section className="perfil">
       <h1>Bienvenido Nombre</h1>
@@ -30,7 +35,7 @@ function PerfilUsuario() {
           <>
             <div className="opciones">
               <span onClick={getPerfil}>Actualizar datos</span>
-              <span>Logout</span>
+              <span onClick={logout}>Logout</span>
             </div>
           </>
         )}
