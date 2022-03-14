@@ -1,5 +1,8 @@
 <?php
+
+//Creamos la clase conexion
 class Conexion extends PDO{
+    //Datos ddbb, cambiar a localhost en caso de ser necesario.
     private $host = 'bbdd.wherejustwatch.com';
     private $dbname = 'ddb183957';
     private $user = 'ddb183957';

@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/form.css";
-import { Formik } from "formik";
+import { Formik, isInteger } from "formik";
 
-async function setRegister(username, password, email){
+async function setRegister(username, password, email) {
   //Enviamos al servicio de login por metodo post
-
+  /*
   const api = await fetch('http://localhost:3100/backend/usuario.php?username='+username+'&password='+password+'&email='+email,{mode: 'no-cors',method: 'POST'});
   const data = await api.json();
   if(data.response === "true"){
@@ -13,7 +13,24 @@ async function setRegister(username, password, email){
     alert("El usuario ya existe");
   }
   //const data = await api.json();
-  //console.log(data);
+  //console.log(data);*/
+
+  var myHeaders = new Headers();
+  myHeaders.append("Cookie", "PHPSESSID=tlhnjm4if2o7p85ma110akckgu");
+
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  fetch(
+    'http://localhost:3100/backend/usuario.php?username='+username+'&password='+password+'&email='+email,
+    requestOptions
+  )
+    .then((response) => response.text())
+    .then((result) => isInteger(result)) ? window.location.href = "/login" : alert("El usuario ya existe")
+    .catch((error) => console.log("error", error));
 }
 
 function FormRegister() {
@@ -36,7 +53,9 @@ function FormRegister() {
             if (!values.email) {
               errors.email = "El email es requerido";
             } else if (
-              !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(values.email)
+              !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(
+                values.email
+              )
             ) {
               errors.email = "El email no es valido";
             }
@@ -65,10 +84,10 @@ function FormRegister() {
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+              //alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
               setRegister(values.username, values.password, values.email);
-            }, 400);
+            }, 2000);
           }}
         >
           {(props) => {
@@ -162,7 +181,7 @@ function FormRegister() {
                   className="btnLogin"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? `Loading` : `Enviar`}
+                  {isSubmitting ? `Cargando` : `Enviar`}
                 </button>
               </form>
             );
